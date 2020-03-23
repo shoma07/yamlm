@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.7.0
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns: ['(\A|\s+)#']
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
