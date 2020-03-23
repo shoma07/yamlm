@@ -2,3 +2,5 @@
 # frozen_string_literal: true
 
 require 'yamlm'
+
+YAMLM::CLI.new(ARGV).execute
