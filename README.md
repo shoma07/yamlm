@@ -4,27 +4,52 @@ Tool to merge multiple YAML files.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'yamlm'
-```
-
-And then execute:
-
-```sh
-$ bundle install
-```
-
-Or install it yourself as:
-
 ```sh
 $ gem install yamlm
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+# yamlm <file1.yml> <file2.yml> ...<filen.yml>
+$ yamlm original.yml extended.yml
+```
+
+original.yml
+
+```
+record:
+  hoge: &hoge
+    id: 1
+    name: hoge
+    age: 20
+```
+
+extended.yml
+
+```
+record:
+  fuga:
+    <<: *hoge
+    name: fuga
+```
+
+output
+
+```
+---
+record:
+  hoge:
+    id: 1
+    name: hoge
+    age: 20
+  fuga:
+    id: 1
+    name: fuga
+    age: 20
+```
+
+It must be recognized as a single document when the files are combined.
 
 ## Development
 
