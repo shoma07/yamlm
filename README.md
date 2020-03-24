@@ -51,6 +51,10 @@ record:
 
 It must be recognized as a single document when the files are combined.
 
+## Features
+
+- Output destination can be specified as an option.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

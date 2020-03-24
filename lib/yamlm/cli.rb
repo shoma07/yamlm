@@ -4,6 +4,7 @@ module YAMLM
   # YAMLM::CLI
   class CLI
     # @param argv [Array]
+    # @return [YAMLM::CLI]
     def initialize(argv = [])
       @files = argv
     end
